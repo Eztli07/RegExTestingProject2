@@ -1,10 +1,10 @@
 public class Snakes
 {
     String breed;
-    double length; //in ft
-    boolean venomous;
+    String length;
+    String venomous;
 
-    public Snakes(String breed, double length, boolean venomous)
+    public Snakes(String breed, String length, String venomous)
     {
         this.breed = breed;
         this.length = length;
@@ -16,12 +16,12 @@ public class Snakes
         return breed;
     }
 
-    public double getLength()
+    public String getLength()
     {
         return length;
     }
 
-    public boolean isVenomous()
+    public String isVenomous()
     {
         return venomous;
     }
