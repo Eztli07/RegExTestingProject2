@@ -290,4 +290,147 @@ class SnakesTest {
         System.out.println(python.getLength().length() > 5);
     }
 
+    @Test
+    void getBreedEqualsZero() //test 41
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().equals("0"));
+    }
+
+    @Test
+    void getBreedEqualsZeroCase() //test 42
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().equalsIgnoreCase("0"));
+    }
+
+    @Test
+    void emptyString() //test 43
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().isEmpty());
+
+    }
+
+    @Test
+    void notEmptyString() //test 44
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(!python.getVenomous().isEmpty());
+    }
+
+    @Test
+    void contains0() //test 45
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().contains("0"));
+
+    }
+
+    @Test
+    void startsWith0() //test 46
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().startsWith("0"));
+    }
+
+    @Test
+    void endsWith0() //test 47
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().endsWith("0"));
+    }
+
+    @Test
+    void nullString() //test 48
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous() == null);
+    }
+
+    @Test
+    void notNullString() //test 49
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous() != null);
+    }
+
+    @Test
+    void trimmedEquals() //test 50
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().trim().equals("0"));
+    }
+
+    @Test
+    void onlyLetters() //test 51
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().matches("[a-zA-Z]+"));
+
+    }
+
+    @Test
+    void onlyNumbers() //test 52
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().matches("\\d+"));
+    }
+
+    @Test
+    void numbersAndLetters() //test 53
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().matches("[a-zA-Z0-9]+"));
+    }
+
+    @Test
+    void matchesZeroRegex() //test 54
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().matches(".*0.*"));
+    }
+
+    @Test
+    void specialCharacters() //test 55
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().matches(".*[^a-zA-Z0-9].*"));
+    }
+
+    @Test
+    void uppercase() //test 56
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().matches(".*[A-Z].*"));
+    }
+
+    @Test
+    void lowercase() //test 57
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().matches(".*[a-z].*"));
+    }
+
+    @Test
+    void isPalindrome() //test 58
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().equals(new StringBuilder(python.getBreed()).reverse().toString()));
+    }
+
+    @Test
+    void isEmail() //test 59
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().matches("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}$"));
+    }
+
+    @Test
+    void isGreaterThanFive() //test 60
+    {
+        Snakes python = new Snakes("Python", "5.8 feet", "0");
+        System.out.println(python.getVenomous().length() > 5);
+    }
+
 }
