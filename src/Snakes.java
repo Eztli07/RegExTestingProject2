@@ -21,7 +21,7 @@ public class Snakes
         return length;
     }
 
-    public String isVenomous()
+    public String getVenomous()
     {
         return venomous;
     }
